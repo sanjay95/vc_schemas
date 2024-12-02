@@ -1,0 +1,190 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schema.affinidi.io/healthProfileV1-0.json",
+    "$metadata": {
+        "version": 1,
+        "revision": 0,
+        "discoverable": true,
+        "uris": {
+            "jsonLdContext": "https://schema.affinidi.io/healthProfileV1-0.jsonld",
+            "jsonSchema": "https://schema.affinidi.io/healthProfileV1-0.json"
+        }
+    },
+    "title": "HealthProfile",
+    "description": "Schema for a comprehensive health profile",
+    "type": "object",
+    "required": [
+        "@context",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "credentialSubject"
+    ],
+    "properties": {
+        "@context": {
+            "type": [
+                "string",
+                "array",
+                "object"
+            ]
+        },
+        "type": {
+            "type": "string"
+        },
+        "issuer": {
+            "type": [
+                "string",
+                "object"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
+        },
+        "issuanceDate": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "credentialSubject": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "object",
+                    "properties": {
+                        "name": { "type": "string" },
+                        "email": { "type": "string", "format": "email" },
+                        "age": { "type": "integer" },
+                        "id": { "type": "integer" },
+                        "is_active": { "type": "boolean" },
+                        "address": {
+                            "type": "object",
+                            "properties": {
+                                "street": { "type": "string" },
+                                "city": { "type": "string" },
+                                "zip": { "type": "string" }
+                            }
+                        },
+                        "phone_numbers": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": { "type": "string" },
+                                    "number": { "type": "string" }
+                                }
+                            }
+                        },
+                        "emergency_contact": {
+                            "type": "object",
+                            "properties": {
+                                "name": { "type": "string" },
+                                "phone": { "type": "string" }
+                            }
+                        }
+                    }
+                },
+                "vitals": {
+                    "type": "object",
+                    "properties": {
+                        "height": { "type": "integer" },
+                        "weight": { "type": "integer" },
+                        "blood_type": { "type": "string" },
+                        "allergies": {
+                            "type": "array",
+                            "items": { "type": "string" }
+                        },
+                        "medications": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": { "type": "string" },
+                                    "dosage": { "type": "string" },
+                                    "times_per_day": { "type": "integer" }
+                                }
+                            }
+                        },
+                        "conditions": {
+                            "type": "array",
+                            "items": { "type": "string" }
+                        },
+                        "last_checkup": { "type": "string", "format": "date" },
+                        "next_checkup": { "type": "string", "format": "date" },
+                        "insurance": {
+                            "type": "object",
+                            "properties": {
+                                "provider": { "type": "string" },
+                                "policy_number": { "type": "string" }
+                            }
+                        },
+                        "blood_pressure": {
+                            "type": "object",
+                            "properties": {
+                                "systolic": { "type": "integer" },
+                                "diastolic": { "type": "integer" }
+                            }
+                        },
+                        "heart_rate": {
+                            "type": "object",
+                            "properties": {
+                                "rate": { "type": "integer" },
+                                "rhythm": { "type": "string" },
+                                "resting_hr": { "type": "integer" },
+                                "max_hr": { "type": "integer" },
+                                "min_hr": { "type": "integer" },
+                                "avg_hr": { "type": "integer" },
+                                "timestamp": { "type": "string", "format": "date-time" }
+                            }
+                        },
+                        "temperature": { "type": "integer" },
+                        "respiratory_rate": { "type": "integer" },
+                        "oxygen_saturation": { "type": "integer" },
+                        "glucose": { "type": "integer" },
+                        "cholesterol": {
+                            "type": "object",
+                            "properties": {
+                                "total": { "type": "integer" },
+                                "hdl": { "type": "integer" },
+                                "ldl": { "type": "integer" }
+                            }
+                        },
+                        "electrocardiogram": {
+                            "type": "object",
+                            "properties": {
+                                "rate": { "type": "integer" },
+                                "rhythm": { "type": "string" },
+                                "intervals": {
+                                    "type": "object",
+                                    "properties": {
+                                        "p": { "type": "string" },
+                                        "pr": { "type": "string" },
+                                        "qrs": { "type": "string" },
+                                        "qt": { "type": "string" }
+                                    }
+                                },
+                                "axis": {
+                                    "type": "object",
+                                    "properties": {
+                                        "qrs": { "type": "string" },
+                                        "p": { "type": "string" },
+                                        "t": { "type": "string" }
+                                    }
+                                },
+                                "waveforms": {
+                                    "type": "object",
+                                    "properties": {
+                                        "p": { "type": "string" },
+                                        "qrs": { "type": "string" },
+                                        "t": { "type": "string" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
