@@ -1,0 +1,68 @@
+{
+    "@context": {
+        "HealthProfile": {
+            "@id": "https://schema.affinidi.io/healthProfileV1-0.jsonld",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true
+            }
+        },
+        "user": {
+            "@id": "schema-id:user",
+            "@type": "@id"
+        },
+        "name": {
+            "@id": "schema-id:name",
+            "@type": "https://schema.org/Text"
+        },
+        "email": {
+            "@id": "schema-id:email",
+            "@type": "https://schema.org/Text"
+        },
+        "age": {
+            "@id": "schema-id:age",
+            "@type": "https://schema.org/Integer"
+        },
+        "id": {
+            "@id": "schema-id:id",
+            "@type": "https://schema.org/Integer"
+        },
+        "is_active": {
+            "@id": "schema-id:is_active",
+            "@type": "https://schema.org/Boolean"
+        },
+        "address": {
+            "@id": "schema-id:address",
+            "@type": "@id",
+            "@context": {
+                "street": { "@id": "schema-id:street" },
+                "city": { "@id": "schema-id:city" },
+                "zip": { "@id": "schema-id:zip" }
+            }
+        },
+        "phone_numbers": {
+            "@id": "schema-id:phone_numbers",
+            "@type": "@id",
+            "@context": {
+                "type": { "@id": "schema-id:type" },
+                "number": { "@id": "schema-id:number" }
+            }
+        },
+        "emergency_contact": {
+            "@id": "schema-id:emergency_contact",
+            "@type": "@id",
+            "@context": {
+                "name": { "@id": "schema-id:name" },
+                "phone": { "@id": "schema-id:phone" }
+            }
+        },
+        "vitals": {
+            "@id": "schema-id:vitals",
+            "@type": "@id"
+        },
+        "height": { "@id": "schema-id:height", "@type": "https://schema.org/Integer" },
+        "weight": { "@id": "schema-id:weight", "@type": "https://schema.org/Integer" },
+        "blood_type": { "@id": "schema-id:blood_type", "@type": "https://schema.org/Text" },
+        "allergies": { "@id": "schema-id:allergies", "@type": "https://schema.org/Text" }
+    }
+}
