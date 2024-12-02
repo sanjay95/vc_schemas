@@ -1,7 +1,7 @@
 {
     "@context": {
         "HealthProfile": {
-            "@id": "https://schema.affinidi.io/healthProfileV1-0.jsonld",
+            "@id": "https://raw.githubusercontent.com/sanjay95/vc_schemas/refs/heads/main/healthProfileV1R0.jsonld",
             "@context": {
                 "@version": 1.1,
                 "@protected": true
