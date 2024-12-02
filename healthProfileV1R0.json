@@ -1,13 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://schema.affinidi.io/healthProfileV1-0.json",
+    "$id": "https://raw.githubusercontent.com/sanjay95/vc_schemas/refs/heads/main/healthProfileV1R0.json",
     "$metadata": {
         "version": 1,
         "revision": 0,
         "discoverable": true,
         "uris": {
-            "jsonLdContext": "https://schema.affinidi.io/healthProfileV1-0.jsonld",
-            "jsonSchema": "https://schema.affinidi.io/healthProfileV1-0.json"
+            "jsonLdContext": "https://raw.githubusercontent.com/sanjay95/vc_schemas/refs/heads/main/healthProfileV1R0.jsonld",
+            "jsonSchema": "https://raw.githubusercontent.com/sanjay95/vc_schemas/refs/heads/main/healthProfileV1R0.json"
         }
     },
     "title": "HealthProfile",
